@@ -1,0 +1,17 @@
+#command to create EAR project
+#First create parent project 
+mvn archetype:generate -DarchetypeGroupId=org.codehaus.mojo.archetypes -DarchetypeArtifactId=pom-root -DgroupId=com.sonata.study.jee.sampleear  -DartifactId=samplejeeapp -DinteractiveMode=false
+
+#cd to created directory then create EAR project
+
+mvn archetype:generate -DarchetypeGroupId=org.codehaus.mojo.archetypes -DarchetypeArtifactId=ear-javaee6 -DgroupId=com.sonata.study.jee.sampleear -DartifactId=sampleear -DinteractiveMode=false
+
+#create WAR project if needed
+
+mvn archetype:generate -DarchetypeGroupId=org.codehaus.mojo.archetypes -DarchetypeArtifactId=webapp-javaee6 -DgroupId=com.sonata.study.jee.sampleear -DartifactId=samplewar -DinteractiveMode=false
+
+#create EJB project if needed
+
+mvn archetype:generate -DarchetypeGroupId=org.codehaus.mojo.archetypes -DarchetypeArtifactId=ejb-javaee6 -DgroupId=com.sonata.study.jee.sampleear -DartifactId=sampleejb -DinteractiveMode=false
+
+#now use mavn-ear-plugin to add EJB and/or WAR module, Done!!
