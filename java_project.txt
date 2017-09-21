@@ -1,0 +1,2 @@
+#maven command to create default jar project
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -DgroupId=com.sonata.study.javacode -DartifactId=jdk8 -DinteractiveMode=false
